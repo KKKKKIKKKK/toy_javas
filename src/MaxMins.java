@@ -4,24 +4,39 @@ public class MaxMins {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("3 "); // 숫자 3 출력 
+        System.out.print("두개의 숫자를 입력하시오 :");
         int first = scanner.nextInt();
+        int second = scanner.nextInt(); //숫자입력
 
-        System.out.print("7 "); // 숫자 7 출력 
-        int second = scanner.nextInt();
-
-        int max = Max(first, second);
-        int min = Min(first, second);
-
-        System.out.println("최댓값: " + max);
-        System.out.println("최솟값: " + min);
+ 
+        MaxMins maxMins = new MaxMins(); 
+        int totalmax = Max(first, second);
+        int totalmin = Min(first, second);
+        
+        System.out.println("최댓값: " + totalmax);
+        System.out.println("최솟값: " + totalmin);
     }
 
-    public static int Max(int a, int b) {
-        return Math.max(a, b);
+     public static int Max(int first, int second) { // max 함수
+        int end = 0;
+        if (first > second) {
+          end = first; 
+        } else if (first < second) {
+            end = second;
+        } else {
+            end = first;
+        } return end;
     }
 
-    public static int Min(int a, int b) {
-        return Math.min(a, b);
+    public static int Min(int first, int second) { // min 함수
+        int end = 0;
+        if (first < second) {
+          end = first; 
+        } else if (first > second) {
+            end = second;
+        } else {
+            end = first;
+        } return end;
     }
-}
+
+    }
