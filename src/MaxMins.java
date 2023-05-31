@@ -9,34 +9,34 @@ public class MaxMins {
         int second = scanner.nextInt(); //숫자입력
 
  
-        MaxMins maxMins = new MaxMins(); 
-        int totalmax = Max(first, second);
-        int totalmin = Min(first, second);
+        MaxMins maxMins = new MaxMins();  
+        int maxresult = Max(first, second);
+        int minresult = Min(first, second);
         
-        System.out.println("최댓값: " + totalmax);
-        System.out.println("최솟값: " + totalmin);
+        System.out.println("최댓값: " +  maxresult);
+        System.out.println("최솟값: " + minresult);
     }
 
      public static int Max(int first, int second) { // max 함수
-        int end = 0;
+        int maxresult = 0;
         if (first > second) {
-          end = first; 
+            maxresult = first; 
         } else if (first < second) {
-            end = second;
+            maxresult = second;
         } else {
-            end = first;
-        } return end;
+            maxresult = first;
+        } return maxresult;
     }
 
     public static int Min(int first, int second) { // min 함수
-        int end = 0;
+        int minresult = 0;
         if (first < second) {
-          end = first; 
+            minresult = first; 
         } else if (first > second) {
-            end = second;
+            minresult = second;
         } else {
-            end = first;
-        } return end;
+            minresult = first;
+        } return minresult;
     }
 
     }
