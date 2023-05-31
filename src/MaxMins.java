@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MaxMins {
+public class MaxMins { 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -17,7 +17,7 @@ public class MaxMins {
         System.out.println("최솟값: " + totalmin);
     }
 
-     public static int Max(int first, int second) { // max 함수
+     public static int Max(int first, int second) {// max 함수
         int end = 0;
         if (first > second) {
           end = first; 
